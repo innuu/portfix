@@ -3,75 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Luxury Dark Gold</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <title>Wisnu Bayu Samudra – Full-Stack Web Developer</title>
+    <meta name="description" content="Portofolio Wisnu Bayu Samudra, mahasiswa Universitas Dipa Makassar yang fokus pada Full-Stack Web Development dengan JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wisnu Bayu Samudra – Full-Stack Web Developer">
+    <meta property="og:description" content="Portofolio mahasiswa yang membangun aplikasi web dengan JavaScript.">
+    <meta property="og:image" content="https://innuu.github.io/portfix/assets/foto.jpeg">
+    <meta name="theme-color" content="#2c6bc7">
+    <link rel="icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navigasi utama">
         <div class="container nav-container">
-            <a href="#" class="logo"><img src="assets/logo.png"></a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#about">About</a></li>
+            <a href="#home" class="logo"><img src="assets/logo.png" alt="Wisnu Bayu Samudra"></a>
+            <ul class="nav-links" id="menu">
+                <li><a href="#home" data-i18n="nav_home">Beranda</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Keahlian</a></li>
+                <li><a href="#project" data-i18n="nav_projects">Proyek</a></li>
+                <li><a href="#about" data-i18n="nav_about">Tentang</a></li>
+                <li id="navContact" hidden><a href="#contact" data-i18n="nav_contact">Kontak</a></li>
             </ul>
+            <div class="nav-tools">
+                <div class="lang" role="group" aria-label="Bahasa / Language">
+                    <button type="button" data-lang="id" aria-pressed="true">ID</button>
+                    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button type="button" class="icon-btn" id="themeBtn"></button>
+                <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰</button>
+            </div>
         </div>
     </nav>
 
     <header id="home" class="hero">
         <div class="container hero-content fade-up">
-
-            <!-- TEXT GROUP (DITAMBAHKAN WRAPPER) -->
             <div class="hero-text">
-
-                <span class="subtitle">Welcome to my universe</span>
-
-                <h2 class="hero-greeting">
-                    Halo, Saya
-                </h2>
-
-                <h1 class="hero-name">
-                    WISNU BAYU SAMUDRA
-                </h1>
-
-                <h2 class="hero-role">
-                    <span class="typing-text"></span>
-                </h2>
-                
-                <p>
-                    Membangun solusi digital skalabel dengan estetika premium dan performa tinggi.
-                </p>
-
+                <span class="subtitle" data-i18n="subtitle">Mahasiswa Universitas Dipa Makassar</span>
+                <p class="hero-greeting" data-i18n="greet">Halo, saya</p>
+                <h1 class="hero-name">WISNU BAYU SAMUDRA</h1>
+                <p class="hero-role"><span class="typing-text">Fullstack Developer</span></p>
+                <p class="lead" data-i18n="tagline"></p>
                 <div class="hero-btns">
-                    <a href="#project" class="btn-primary">Lihat Project</a>
-                    <a href="#about" class="btn-secondary">Tentang Saya</a>
+                    <a href="#project" class="btn-primary" data-i18n="cta_projects"></a>
+                    <a href="#about" class="btn-secondary" data-i18n="cta_about"></a>
                 </div>
-
             </div>
-            <!-- END TEXT GROUP -->
-
-            <!-- FOTO PROFIL -->
             <div class="hero-image">
-                <img src="assets/foto.jpeg" alt="Wisnu Bayu Samudra">
+                <img src="assets/foto.jpeg" alt="Foto Wisnu Bayu Samudra" decoding="async">
             </div>
-
         </div>
     </header>
 
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title fade-up">Tech Stack</h2>
-            <div class="skills-grid fade-up">
-                <span class="badge">HTML5</span>
-                <span class="badge">CSS3</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">React.js</span>
-                <span class="badge">Node.js</span>
-                <span class="badge">PostgreSQL</span>
-                <span class="badge">Git</span>
+            <h2 class="section-title fade-up" data-i18n="skills_title"></h2>
+            <div class="skill-groups fade-up">
+                <div><h3 data-i18n="g_front"></h3><div class="skills-grid"><span class="badge">HTML5</span><span class="badge">CSS3</span><span class="badge">JavaScript</span><span class="badge">React.js</span></div></div>
+                <div><h3 data-i18n="g_back"></h3><div class="skills-grid"><span class="badge">Node.js</span><span class="badge">PostgreSQL</span></div></div>
+                <div><h3 data-i18n="g_tools"></h3><div class="skills-grid"><span class="badge">Git</span></div></div>
             </div>
         </div>
     </section>
@@ -80,44 +73,32 @@
 
     <section id="project" class="projects">
         <div class="container">
-            <h2 class="section-title fade-up">Project Pilihan</h2>
-            <div class="project-grid">
-                <div class="card fade-up">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <span class="tag">Fintech</span>
-                        <h3>Fintech Dashboard</h3>
-                        <p>Analisis data keuangan real-time dengan performa tinggi.</p>
-                    </div>
-                </div>
-                <div class="card fade-up">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <span class="tag">AI</span>
-                        <h3>AI Content Tool</h3>
-                        <p>Platform otomasi konten menggunakan integrasi API OpenAI.</p>
-                    </div>
-                </div>
-                <div class="card fade-up">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <span class="tag">Logistics</span>
-                        <h3>Supply Chain System</h3>
-                        <p>Sistem manajemen logistik untuk skala perusahaan besar.</p>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title fade-up" data-i18n="projects_title"></h2>
+            <div class="project-grid" id="project-list"></div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container fade-up">
-            <h2 class="section-title">About Me</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-dim);">
-                Saya merupakan mahasiswa Universitas Dipa Makassar yang menaruh minat besar pada Full-Stack Web Development dengan fokus pada JavaScript. Saya aktif membangun berbagai aplikasi web sebagai sarana belajar sekaligus melatih kemampuan problem solving melalui proyek nyata dan kolaborasi, serta selalu terbuka untuk belajar hal baru dan menjalin kerja sama.
-            </p>
+            <h2 class="section-title" data-i18n="about_title"></h2>
+            <div class="about-text">
+                <p data-i18n="about_p1"></p>
+                <p data-i18n="about_p2"></p>
+            </div>
         </div>
     </section>
+
+    <section id="contact" class="contact" hidden>
+        <div class="container fade-up">
+            <h2 class="section-title" data-i18n="contact_title"></h2>
+            <p class="contact-text" data-i18n="contact_text"></p>
+            <div class="contact-links" id="contact-links"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">© 2026 Wisnu Bayu Samudra</div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
